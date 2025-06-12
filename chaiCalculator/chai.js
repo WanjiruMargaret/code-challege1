@@ -19,7 +19,8 @@ function calculateChaiIngredients(){
         `${totalWater} ml of water,\n` +
         `${totalMilk} ml of milk,\n` +
         `${totalTeaLeaves} tablespoons of tea leaves,\n` +
-        `${totalSugar} tablespoons of sugar.`);
+        `${totalSugar} tablespoons of sugar.\n`+
+        `karibu kunywa chai`);
     alert(message);
 }
 calculateChaiIngredients();

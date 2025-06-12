@@ -1,25 +1,26 @@
-function calculateChaiIngredients(numberOfCups){
-        const waterPerCup=200;ml
-        const milkPerCup=50;ml
-        const teaLeavesPerCup = 1;tablespoon
-        const sugarPerCup = 2;tablespoon
+function calculateChaiIngredients(){
+    let numberOfCups = prompt("Enter the number of cups of Kenyan Chai you want to make?");
+    numberOfCups = parseInt(numberOfCups);
+    if (isNaN(numberOfCups)) {
+        console.log("Please enter a valid number of cups.");
+        return;
+    }
+    let waterPerCup=200;//ml
+    let milkPerCup=50;//ml
+    let teaLeavesPerCup = 1;//tablespoon
+    let sugarPerCup = 2;//tablespoon
 
-        const totalWater = waterPerCup * numberOfCups;
-        const totalMilk = milkPerCup * numberOfCups;
-        const totalTeaLeaves = teaLeavesPerCup * numberOfCups;
-        const totalSugar=sugarPerCup*numberOfCups;
+    let totalWater = waterPerCup * numberOfCups;
+    let totalMilk = milkPerCup * numberOfCups;
+    let totalTeaLeaves = teaLeavesPerCup * numberOfCups;
+    let totalSugar = sugarPerCup * numberOfCups;
 
-         console.log(`To make ${numberOfCups} cups of Kenyan Chai you will need:`)
-         console.log(`water ${totalWater} ml`)
-         console.log(`milk ${totalMilk}ml`)
-         console.log(`Tea leaves(majani): ${totalTeaLeaves} tablespoon`)
-         console.log(`Sugar (Sukari): ${totalSugar} teaspoons`);
-        console.log("\nEnjoy your Chai Bora!");
+    let message=(`To make ${numberOfCups} cups of Kenyan Chai, you will need:\n` +
+        `${totalWater} ml of water,\n` +
+        `${totalMilk} ml of milk,\n` +
+        `${totalTeaLeaves} tablespoons of tea leaves,\n` +
+        `${totalSugar} tablespoons of sugar.`);
+    alert(message);
 }
-const cupsInput = prompt("Karibu! How many cups of Chai Bora would you like to make?");
-const numberOfCups = Number(cupsInput);
-if (!isNaN(numberOfCups) && numberOfCups > 0) {
-  calculateChaiIngredients(numberOfCups);
-} else {
-  console.log("Please enter a valid number of cups.");
-}
+calculateChaiIngredients();
+// This function calculates the ingredients needed for making Kenyan Chai based on the number of cups specified by the user.

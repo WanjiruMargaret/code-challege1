@@ -13,3 +13,4 @@ function estimateTransactionFee(){
         return;
     }
 }
+estimateTransactionFee();

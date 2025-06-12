@@ -8,7 +8,9 @@ function estimateTransactionFee(){
         alert;
         return;
     }
-    let amount=90;
+     let amount = (amountToSend * 100)/100;
+    //console.log(typeof amount);
+    //console.log(amount);
     let transactionCost =(amount * 1.5)/100;
     let totalAmount=amount + transactionCost
     let message=(`transaction cost is:${transactionCost}\n`+`Total amount:${totalAmount}`);
